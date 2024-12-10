@@ -1,10 +1,8 @@
 import nltk
 from nltk.chat.util import Chat, reflections
 
-# Download necessary NLTK resources
 nltk.download('punkt')
 
-# Define a set of patterns and corresponding responses
 pairs = [
     (r'Hi|Hello|Hey', ['Hello! How can I assist you today?', 'Hi! How can I help you?']),
     (r'How are you?', ['I am good, thank you for asking!', 'I am doing well, how about you?']),
@@ -28,12 +26,10 @@ pairs = [
                'Hmm, I am not sure about that. Could you rephrase?'])
 ]
 
-# Create the chatbot
 def chatbot():
     print("Hello! I am a simple chatbot. Type 'Quit' to end the conversation.")
     chat = Chat(pairs, reflections)
     chat.converse()
 
-# Run the chatbot
 if __name__ == "__main__":
     chatbot()
